@@ -9,7 +9,12 @@ namespace SGP.Repository
 {
     public class UsersRepository
     {
-
+        /// <summary>
+        /// Autentica el usuario contra el sistema
+        /// </summary>
+        /// <param name="userName"> Nombre de usuario</param>
+        /// <param name="passWord"> Contraseña del usuario</param>
+        /// <returns> Retorna Boolean True o False si fue logueado o no </returns>
         public Boolean Login(string userName, string passWord)
         {
             bool isAuthenticated = false;
