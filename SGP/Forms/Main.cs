@@ -117,5 +117,10 @@ namespace SGP.Forms
             loginForm.ShowDialog();
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Clients.Clients clientsForm = new Clients.Clients();
+            clientsForm.ShowDialog();
+        }
     }
 }
