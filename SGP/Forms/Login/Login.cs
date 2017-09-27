@@ -8,12 +8,12 @@ namespace SGP.Forms
     public partial class Login : Form
     {
         #region global Declariations 
-        private UsersRepository UsersRepository;
+        private UsersRepository User;
         #endregion
 
         public Login()
         {
-            UsersRepository = new UsersRepository();
+            User = new UsersRepository();
             InitializeComponent();
         }
 
@@ -31,7 +31,7 @@ namespace SGP.Forms
             try
             {
                 Cursor = Cursors.WaitCursor;
-                bool isAuthenticated = UsersRepository.Login(userName, passWord);
+                bool isAuthenticated = User.Login(userName, passWord);
                 Cursor = Cursors.Arrow;
                 if (isAuthenticated)
                 {

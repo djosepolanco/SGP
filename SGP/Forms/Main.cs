@@ -8,8 +8,8 @@ namespace SGP.Forms
     public partial class Main : Form
     {
         #region Declaraciones Globales
-        private static Login loginForm;
-        private static Clients.Clients clientForm;
+        public static Login loginForm;
+        public static Clients.Clients clientForm;
         #endregion
 
         public Main()
