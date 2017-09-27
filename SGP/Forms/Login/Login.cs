@@ -30,7 +30,9 @@ namespace SGP.Forms
 
             try
             {
+                Cursor = Cursors.WaitCursor;
                 bool isAuthenticated = UsersRepository.Login(userName, passWord);
+                Cursor = Cursors.Arrow;
                 if (isAuthenticated)
                 {
                     this.Close();

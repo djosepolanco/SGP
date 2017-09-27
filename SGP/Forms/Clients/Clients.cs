@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SGP.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,36 +13,26 @@ namespace SGP.Forms.Clients
 {
     public partial class Clients : Form
     {
-        internal static object show;
-
         public Clients()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Clients_Load(object sender, EventArgs e)
         {
-
+            Helper.HideTabs(tab);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNew_Click(object sender, EventArgs e)
         {
+            list.Hide();
+            form.Show();
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            form.Hide();
+            list.Show();
         }
     }
 }

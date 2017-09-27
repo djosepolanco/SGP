@@ -28,296 +28,407 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCedula = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtRnc = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.bntEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tab = new System.Windows.Forms.TabControl();
+            this.list = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.dataGridClients = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClientType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Identification = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.form = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbbTipo = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.grpBox = new System.Windows.Forms.GroupBox();
+            this.cmbClientType = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtIdentification = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.tab.SuspendLayout();
+            this.list.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridClients)).BeginInit();
+            this.form.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grpBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // tab
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NOMBRE:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.tab.Controls.Add(this.list);
+            this.tab.Controls.Add(this.form);
+            this.tab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab.Location = new System.Drawing.Point(0, 0);
+            this.tab.Name = "tab";
+            this.tab.SelectedIndex = 0;
+            this.tab.Size = new System.Drawing.Size(939, 573);
+            this.tab.TabIndex = 1;
             // 
-            // label2
+            // list
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "CÉDULA:";
+            this.list.Controls.Add(this.splitContainer1);
+            this.list.Location = new System.Drawing.Point(4, 22);
+            this.list.Name = "list";
+            this.list.Padding = new System.Windows.Forms.Padding(3);
+            this.list.Size = new System.Drawing.Size(931, 547);
+            this.list.TabIndex = 0;
+            this.list.Text = "List";
+            this.list.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // splitContainer1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "TELÉFONO:";
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.btnSearch);
+            this.splitContainer1.Panel1.Controls.Add(this.txtSearch);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dataGridClients);
+            this.splitContainer1.Size = new System.Drawing.Size(925, 541);
+            this.splitContainer1.SplitterDistance = 70;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(23, 21);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(651, 26);
+            this.txtSearch.TabIndex = 3;
+            // 
+            // dataGridClients
+            // 
+            this.dataGridClients.AllowUserToAddRows = false;
+            this.dataGridClients.AllowUserToDeleteRows = false;
+            this.dataGridClients.AllowUserToOrderColumns = true;
+            this.dataGridClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridClients.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridClients.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dataGridClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridClients.ColumnHeadersHeight = 30;
+            this.dataGridClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.FullName,
+            this.ClientType,
+            this.Identification});
+            this.dataGridClients.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridClients.Location = new System.Drawing.Point(0, 0);
+            this.dataGridClients.Name = "dataGridClients";
+            this.dataGridClients.ReadOnly = true;
+            this.dataGridClients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridClients.RowHeadersVisible = false;
+            this.dataGridClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridClients.Size = new System.Drawing.Size(925, 467);
+            this.dataGridClients.StandardTab = true;
+            this.dataGridClients.TabIndex = 1;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Nombre / Razón Social";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // ClientType
+            // 
+            this.ClientType.HeaderText = "Tipo Cliente";
+            this.ClientType.Name = "ClientType";
+            this.ClientType.ReadOnly = true;
+            // 
+            // Identification
+            // 
+            this.Identification.HeaderText = "Identificación";
+            this.Identification.Name = "Identification";
+            this.Identification.ReadOnly = true;
+            // 
+            // form
+            // 
+            this.form.Controls.Add(this.groupBox1);
+            this.form.Controls.Add(this.btnSave);
+            this.form.Controls.Add(this.btnCancel);
+            this.form.Controls.Add(this.grpBox);
+            this.form.Location = new System.Drawing.Point(4, 22);
+            this.form.Name = "form";
+            this.form.Padding = new System.Windows.Forms.Padding(3);
+            this.form.Size = new System.Drawing.Size(931, 547);
+            this.form.TabIndex = 1;
+            this.form.Text = "Form";
+            this.form.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(8, 183);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(917, 291);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(911, 270);
+            this.dataGridView1.StandardTab = true;
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Contact";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Contacto";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ContactType";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSave.Location = new System.Drawing.Point(818, 488);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(104, 43);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnCancel.Location = new System.Drawing.Point(707, 488);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(104, 43);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // grpBox
+            // 
+            this.grpBox.Controls.Add(this.cmbClientType);
+            this.grpBox.Controls.Add(this.label4);
+            this.grpBox.Controls.Add(this.txtIdentification);
+            this.grpBox.Controls.Add(this.label2);
+            this.grpBox.Controls.Add(this.txtFullName);
+            this.grpBox.Controls.Add(this.label1);
+            this.grpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBox.Location = new System.Drawing.Point(8, 12);
+            this.grpBox.Name = "grpBox";
+            this.grpBox.Size = new System.Drawing.Size(914, 165);
+            this.grpBox.TabIndex = 2;
+            this.grpBox.TabStop = false;
+            // 
+            // cmbClientType
+            // 
+            this.cmbClientType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbClientType.FormattingEnabled = true;
+            this.cmbClientType.Location = new System.Drawing.Point(218, 117);
+            this.cmbClientType.Name = "cmbClientType";
+            this.cmbClientType.Size = new System.Drawing.Size(309, 28);
+            this.cmbClientType.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(289, 107);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(95, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "CELULAR:";
+            this.label4.Size = new System.Drawing.Size(92, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Tipo Cliente";
             // 
-            // label5
+            // txtIdentification
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 172);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(10, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = ":";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.txtIdentification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentification.Location = new System.Drawing.Point(218, 71);
+            this.txtIdentification.Name = "txtIdentification";
+            this.txtIdentification.Size = new System.Drawing.Size(309, 26);
+            this.txtIdentification.TabIndex = 6;
             // 
-            // txtNombre
+            // label2
             // 
-            this.txtNombre.Location = new System.Drawing.Point(117, 43);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(412, 20);
-            this.txtNombre.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(84, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Identificación";
             // 
-            // txtCedula
+            // txtFullName
             // 
-            this.txtCedula.Location = new System.Drawing.Point(117, 74);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(176, 20);
-            this.txtCedula.TabIndex = 6;
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.Location = new System.Drawing.Point(218, 25);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(662, 26);
+            this.txtFullName.TabIndex = 4;
             // 
-            // label6
+            // label1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 143);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "DIRECCIÓN:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Nombre / Razon Social";
             // 
-            // txtTelefono
+            // btnSearch
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(117, 104);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(154, 20);
-            this.txtTelefono.TabIndex = 8;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(117, 136);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(412, 20);
-            this.txtDireccion.TabIndex = 10;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(365, 100);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(164, 20);
-            this.txtCelular.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(315, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "RNC:";
-            // 
-            // txtRnc
-            // 
-            this.txtRnc.Location = new System.Drawing.Point(365, 70);
-            this.txtRnc.Name = "txtRnc";
-            this.txtRnc.Size = new System.Drawing.Size(164, 20);
-            this.txtRnc.TabIndex = 7;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(696, 165);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(115, 60);
-            this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(696, 268);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(115, 59);
-            this.btnEditar.TabIndex = 15;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // bntEliminar
-            // 
-            this.bntEliminar.Location = new System.Drawing.Point(696, 368);
-            this.bntEliminar.Name = "bntEliminar";
-            this.bntEliminar.Size = new System.Drawing.Size(115, 55);
-            this.bntEliminar.TabIndex = 16;
-            this.bntEliminar.Text = "ELIMINAR";
-            this.bntEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnNuevo.Location = new System.Drawing.Point(696, 64);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(115, 60);
-            this.btnNuevo.TabIndex = 13;
-            this.btnNuevo.Text = "NUEVO CLIENTE";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.RosyBrown;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 201);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(635, 238);
-            this.dataGridView1.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 172);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "TIPO DE CLIENTE:";
-            // 
-            // cbbTipo
-            // 
-            this.cbbTipo.FormattingEnabled = true;
-            this.cbbTipo.Items.AddRange(new object[] {
-            "PERSONA",
-            "TALLER",
-            "EMPRESA"});
-            this.cbbTipo.Location = new System.Drawing.Point(117, 165);
-            this.cbbTipo.Name = "cbbTipo";
-            this.cbbTipo.Size = new System.Drawing.Size(121, 21);
-            this.cbbTipo.TabIndex = 11;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(244, 173);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "FECHA DE INGRESO:";
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(365, 166);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(164, 20);
-            this.txtFecha.TabIndex = 12;
+            this.btnSearch.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSearch.Location = new System.Drawing.Point(808, 13);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(104, 43);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Nuevo";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(547, 40);
+            this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button1.Location = new System.Drawing.Point(698, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Size = new System.Drawing.Size(104, 43);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Filtrar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Clients
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(858, 451);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtFecha);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.cbbTipo);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.bntEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtRnc);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtCelular);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCedula);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(939, 573);
+            this.Controls.Add(this.tab);
             this.Name = "Clients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Clients";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Clients_Load);
+            this.tab.ResumeLayout(false);
+            this.list.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridClients)).EndInit();
+            this.form.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.grpBox.ResumeLayout(false);
+            this.grpBox.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabControl tab;
+        private System.Windows.Forms.TabPage list;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridView dataGridClients;
+        private System.Windows.Forms.TabPage form;
+        private System.Windows.Forms.GroupBox grpBox;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClientType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Identification;
+        private System.Windows.Forms.ComboBox cmbClientType;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtCedula;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtRnc;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button bntEliminar;
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.TextBox txtIdentification;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbbTipo;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button button1;
     }
 }
