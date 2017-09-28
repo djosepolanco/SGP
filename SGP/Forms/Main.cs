@@ -1,12 +1,6 @@
 ﻿using SGP.Helpers;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SGP.Forms;
 using System.Windows.Forms;
 
 namespace SGP.Forms
@@ -14,7 +8,8 @@ namespace SGP.Forms
     public partial class Main : Form
     {
         #region Declaraciones Globales
-        private static Login loginForm;
+        public static Login loginForm;
+        public static Clients.Clients clientForm;
         #endregion
 
         public Main()
@@ -119,8 +114,16 @@ namespace SGP.Forms
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Clients.Clients clientsForm = new Clients.Clients();
-            clientsForm.ShowDialog();
+            if (clientForm == null)
+            {
+                clientForm = new Clients.Clients();
+                clientForm.MdiParent = this;
+                clientForm.Show();
+            }
+            else
+            {
+                clientForm.Activate();
+            }
         }
     }
 }
