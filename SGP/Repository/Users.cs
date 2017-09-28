@@ -10,7 +10,7 @@ namespace SGP.Repository
     public class UsersRepository
     {
         /// <summary>
-        /// Autentica el usuario contra el sistema utilizando credenciales utilizando usuario y contraseña
+        ///         /// Autentica el usuario contra el sistema utilizando credenciales utilizando usuario y contraseña
         /// </summary>
         /// <param name="userName"> Nombre de usuario</param>
         /// <param name="passWord"> Contraseña del usuario</param>
