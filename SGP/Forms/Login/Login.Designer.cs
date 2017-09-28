@@ -76,7 +76,6 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -91,7 +90,6 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;

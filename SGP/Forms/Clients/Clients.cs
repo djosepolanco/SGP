@@ -1,53 +1,47 @@
-﻿using SGP.Helpers;
-using SGP.Repository;
-using SGP.Models;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using SGP.Enums;
 
 namespace SGP.Forms.Clients
 {
     public partial class Clients : Form
     {
-        #region Declaraciones Globales
-        private ClientsRepository Client;
-        #endregion
+        internal static object show;
 
         public Clients()
         {
-            Client = new ClientsRepository();
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Clients_Load(object sender, EventArgs e)
         {
-            Helper.HideTabs(tab);
-            dataGridClients.Rows.Clear();
-            foreach (Models.Clients client in Client.FindAll())
-            {
-                dataGridClients.Rows.Add(
-                    client.Id,
-                    client.FullName,
-                    ((AppEnums.ClientType)client.ClientType).ToName(),
-                    client.Identification);
-            }
+
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            list.Hide();
-            form.Show();
-        }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            form.Hide();
-            list.Show();
-        }
-
-        private void Clients_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Main.clientForm = null;
         }
     }
 }

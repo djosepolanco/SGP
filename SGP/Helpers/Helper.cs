@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +18,6 @@ namespace SGP.Helpers
             .OK, MessageBoxIcon icon = MessageBoxIcon.Information)
         {
             return MessageBox.Show(message, "SGP", buttons, icon);
-        }
-
-        internal static void HideTabs(TabControl tab)
-        {
-            tab.Appearance = TabAppearance.FlatButtons;
-            tab.ItemSize = new Size(0, 1);
-            tab.SizeMode = TabSizeMode.Fixed;
         }
     }
 }
